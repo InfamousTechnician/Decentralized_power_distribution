@@ -34,7 +34,7 @@ def update_regulators():
     #for regulators in range(households):
     integration_regulators -= (expected_network_frequency - network_frequency(total_power_consumption())) / expected_network_frequency * regulation_speed
 
-def update_availability(actual_network_frequency): # randomly switch consumers on and off to maintain a balanced load on the system
+def update_availability(): # randomly switch consumers on and off to maintain a balanced load on the system
     for house in range(households):        
         pseudo_random = 0
         for chance in range(max_consumer_power-consumptions[house]): # bigger the consumption the LOWER the chance to switch it off
